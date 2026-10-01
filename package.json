@@ -1,0 +1,20 @@
+{
+    "name": "returnflow",
+    "version": "1.0.0",
+    "private": true,
+    "description": "ReturnFlow - Returns and Exchange Operations Platform",
+    "workspaces": [
+        "frontend"
+    ],
+    "scripts": {
+        "prestart": "bash setup.sh --start",
+        "start": "concurrently \"bun run dev:backend\" \"bun run dev:frontend\"",
+        "dev:frontend": "cd frontend && bun run dev",
+        "dev:backend": "cd backend && ../.venv/bin/python manage.py runserver 0.0.0.0:8000",
+        "seed": "cd backend && ../.venv/bin/python scripts/seed.py",
+        "test": "cd backend && ../.venv/bin/python manage.py test apps"
+    },
+    "devDependencies": {
+        "concurrently": "9.2.1"
+    }
+}
