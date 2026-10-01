@@ -161,3 +161,7 @@ Screenshots are not in the repository yet. Add them here after capturing the run
 - Return detail, including history
 - Staff operations queue
 - Warehouse inspection and refund or exchange progress
+
+## License
+
+ReturnFlow is licensed under the [MIT License](LICENSE).
